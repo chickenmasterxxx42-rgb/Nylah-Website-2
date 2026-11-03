@@ -1,0 +1,238 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Nylah's Braiding</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #fff7fb;
+            color: #30212b;
+        }
+
+        header {
+            background: #25151f;
+            color: white;
+            padding: 24px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        header h1 {
+            font-size: 25px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffacd2;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 65px 20px 35px;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 12px;
+            color: #9d4774;
+        }
+
+        .hero p {
+            color: #705968;
+            font-size: 16px;
+        }
+
+        .contact-container {
+            max-width: 650px;
+            margin: 20px auto 70px;
+            padding: 35px;
+            background: white;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(80, 30, 60, 0.09);
+        }
+
+        .contact-container h3 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .contact-container > p {
+            color: #786575;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 20px;
+            border: 1px solid #e3c9d8;
+            border-radius: 9px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #bd6697;
+        }
+
+        textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: #a94d7d;
+            color: white;
+            border: none;
+            border-radius: 9px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #84385f;
+        }
+
+        .social {
+            text-align: center;
+            margin-top: 30px;
+            line-height: 1.8;
+        }
+
+        .social a {
+            color: #a94d7d;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #25151f;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .hero h2 {
+                font-size: 34px;
+            }
+
+            .contact-container {
+                margin: 20px 15px 50px;
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Nylah's Braiding 👑</h1>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="donate.html">Donate</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Let's Connect ✨</h2>
+    <p>Have a question or want to ask about an appointment? Send us a message!</p>
+</section>
+
+<main class="contact-container">
+    <h3>Send a Message</h3>
+    <p>Fill out the form below and we'll get back to you.</p>
+
+    <form action="https://formspree.io/f/mrppyqly" method="POST">
+
+        <label for="name">Your Name</label>
+        <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+        >
+
+        <label for="email">Your Email</label>
+        <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+        >
+
+        <label for="message">Your Message</label>
+        <textarea
+                id="message"
+                name="message"
+                placeholder="Write your message here..."
+                required
+        ></textarea>
+
+        <button type="submit">Send Message ✨</button>
+    </form>
+    <div class="social">
+        <p>Call or text to ask about appointments!</p>
+        <a href="tel:+19549909086">Call Nylah: (954) 990-9086</a>
+        <br>
+        <a href="sms:+19549909086">Text Nylah</a>
+    </div>
+    <div class="social">
+        <p>Follow us on TikTok!</p>
+        <a href="https://www.tiktok.com/@nylahs.braiding" target="_blank" rel="noopener noreferrer">
+            @nylahs.braiding
+        </a>
+    </div>
+</main>
+
+<footer>
+    <p>© 2026 Nylah's Braiding. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
+```

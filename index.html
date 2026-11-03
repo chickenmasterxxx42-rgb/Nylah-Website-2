@@ -1,0 +1,530 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nylah's Braiding | Beauty in Every Braid</title>
+
+    <meta name="google-site-verification" content="qyVILTIqEmnA5tVnrGu0870VBedBgQTCWj7_NXQwn14" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: #fff8ff;
+            color: #381541;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 3px 20px #b85dc322;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 900;
+            color: #a32db9;
+        }
+
+        .logo span { color: #e45bb8; }
+
+        nav {
+            display: flex;
+            gap: 22px;
+        }
+
+        nav a {
+            color: #56205e;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        nav a:hover { color: #df48b9; }
+
+        .hero {
+            min-height: 570px;
+            padding: 80px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            background: linear-gradient(135deg, #fff0fb, #eee0ff);
+        }
+
+        .hero-content { max-width: 550px; }
+
+        .tag {
+            color: #ad39bf;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 6vw, 68px);
+            line-height: 1.1;
+            margin: 22px 0;
+            color: #43144e;
+        }
+
+        .hero h1 span { color: #dc4db5; }
+
+        .hero p {
+            color: #795580;
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(120deg, #ad35c1, #e45bb9);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        .button:hover { transform: translateY(-4px); }
+
+        .hero-image {
+            width: 43%;
+            height: 440px;
+            min-width: 280px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 180px 180px 30px 30px;
+            border: 7px solid white;
+            box-shadow: 0 15px 40px #7d309933;
+        }
+
+        section { padding: 80px 8%; }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-heading h2 {
+            font-size: 38px;
+            color: #682476;
+            margin-bottom: 12px;
+        }
+
+        .section-heading p { color: #916b98; }
+
+        .services { background: white; }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: #fff7ff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px #82379617;
+            transition: .3s;
+        }
+
+        .service-card:hover { transform: translateY(-7px); }
+
+        .service-image {
+            width: 100%;
+            height: 270px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .service-info { padding: 23px; }
+
+        .service-info h3 {
+            color: #a12db5;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .service-info p {
+            color: #85698b;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 4px solid white;
+            box-shadow: 0 8px 20px #6e288522;
+            transition: .3s;
+        }
+
+        .gallery-grid img:hover { transform: scale(1.025); }
+
+        .about {
+            background: white;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-image {
+            width: 43%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+
+        .about-content h2 {
+            font-size: 38px;
+            color: #9d31b6;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            color: #806b85;
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        .booking {
+            text-align: center;
+            background: linear-gradient(130deg, #a933bd, #df64bd);
+            color: white;
+        }
+
+        .booking h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .booking p {
+            margin-bottom: 30px;
+            color: #fff0ff;
+        }
+
+        .booking .button {
+            background: white;
+            color: #a933bd;
+        }
+
+        .tiktok-section {
+            padding: 75px 8%;
+            text-align: center;
+            background: linear-gradient(135deg, #fff0fb, #eadbff);
+        }
+
+        .tiktok-section h2 {
+            font-size: 36px;
+            color: #78258f;
+            margin-bottom: 15px;
+        }
+
+        .tiktok-section p {
+            color: #80628b;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .tiktok-section h3 {
+            color: #d34bb5;
+            font-size: 25px;
+            margin-bottom: 25px;
+        }
+
+        .tiktok-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(120deg, #a933bd, #e45bb9);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        .tiktok-button:hover { transform: translateY(-4px); }
+
+        footer {
+            background: #32143f;
+            color: #fceaff;
+            padding: 35px 8%;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 8px;
+            color: #d9b9e2;
+            font-size: 14px;
+        }
+
+        footer a { color: #f5a4ed; }
+
+        @media(max-width: 850px) {
+            .hero, .about {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-image, .about-image { width: 100%; }
+
+            .service-grid, .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width: 550px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                gap: 13px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a { font-size: 13px; }
+
+            .service-grid, .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section { padding: 60px 6%; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">NYLAH'S <span>BRAIDING</span></div>
+    <nav>
+
+        <a href="#about">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="donate.html">Donate</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="tag">BEAUTY • CONFIDENCE • CREATIVITY</div>
+
+            <h1>Where Every Braid Becomes <span>Art.</span></h1>
+
+            <p>
+                Welcome to Nylah's Braiding!
+                Discover beautiful braids, stunning locs,
+                and creative protective styles.
+                Your next hairstyle starts here.
+            </p>
+
+            <a href="#services" class="button">Explore Our Styles</a>
+        </div>
+
+        <img class="hero-image"
+             src="https://media.haircelona.com/haircelona/2026/05/box-braids-waist-length-real-person-69f9b5ca732ba.webp"
+             alt="Long box braids hairstyle">
+    </section>
+
+    <section class="services" id="services">
+
+        <div class="section-heading">
+            <h2>Our Hairstyles 💗</h2>
+            <p>Find the style that expresses YOU.</p>
+        </div>
+
+        <div class="service-grid">
+
+            <div class="service-card">
+                <img class="service-image"
+                     src="https://media.haircelona.com/haircelona/2026/05/box-braids-waist-length-real-person-69f9b5ca732ba.webp"
+                     alt="Long individual box braids">
+                <div class="service-info">
+                    <h3>Box Braids</h3>
+                    <p>Classic individual braids with beautiful length and detail.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img class="service-image"
+                     src="https://www.joliedensbeautybar.com/cdn/shop/files/1763415772056.jpg?v=1765577054"
+                     alt="Small knotless braids">
+                <div class="service-info">
+                    <h3>Knotless Braids</h3>
+                    <p>Natural-looking individual braids with a seamless finish.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img class="service-image"
+                     src="https://tse4.mm.bing.net/th/id/OIP.YogsZ7ciIWL0IXo0a1YRlAHaJQ?r=0&pid=Api&h=220&P=0"
+                     alt="Boho box braids">
+                <div class="service-info">
+                    <h3>Boho Braids</h3>
+                    <p>Beautiful braids mixed with soft, flowing curly strands.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img class="service-image"
+                     src="https://media.boldhairstyles.com/2026/04/small-cornrows-portrait-real-person-69ea8fe9ae18f.webp"
+                     alt="Neat cornrow braids">
+                <div class="service-info">
+                    <h3>Cornrows</h3>
+                    <p>Detailed scalp braids with clean patterns and designs.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img class="service-image"
+                     src="https://images.squarespace-cdn.com/content/v1/5678d3c0cbced6107e8c53bb/1696555508379-A6IZCANY7T5X810LLD4E/Acting-Headshot-2303_19.JPG"
+                     alt="Long brown loc hairstyle">
+                <div class="service-info">
+                    <h3>Locs</h3>
+                    <p>Beautiful loc styles with personality and character.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <img class="service-image"
+                     src="https://tse1.mm.bing.net/th/id/OIP.m5i6ycV-C8EKqxalOePkuAHaNK?r=0&pid=Api&h=220&P=0"
+                     alt="Long natural dreadlocks">
+                <div class="service-info">
+                    <h3>Dreadlocks</h3>
+                    <p>Stylish dreadlocks with beautiful texture and detail.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+
+        <div class="section-heading">
+            <h2>The Braid Gallery ✨</h2>
+            <p>A little inspiration for your next look.</p>
+        </div>
+
+        <div class="gallery-grid">
+            <img src="https://tse3.mm.bing.net/th?id=OIF.CdTBDum2fUNzXZ4MNpy%2fHQ&r=0&pid=Api&h=220&P=0"
+                 alt="Box braids">
+
+            <img src="https://media.beautycon.com/vzfhnuaggt/uploads/2024/04/409453173_7276158079093684_8248538826894127049_n.jpg"
+                 alt="Boho braids">
+
+            <img src="https://media.boldhairstyles.com/2026/04/small-cornrows-portrait-real-person-69ea8fe9ae18f.webp"
+                 alt="Cornrows">
+        </div>
+
+    </section>
+
+    <section class="about" id="about">
+
+        <img class="about-image"
+             src="https://www.joliedensbeautybar.com/cdn/shop/files/1763415772056.jpg?v=1765577054"
+             alt="Knotless braids">
+
+        <div class="about-content">
+            <h2>Welcome to Nylah's Braiding 💜</h2>
+
+            <p>
+                At Nylah's Braiding, we celebrate creativity,
+                confidence, and beautiful hair.
+            </p>
+
+            <p>
+                From classic box braids to beautiful locs,
+                our goal is to help you find a hairstyle
+                you'll love.
+            </p>
+
+            <a href="contact.html" class="button">Get in Touch</a>
+        </div>
+
+    </section>
+
+    <section class="booking">
+        <h2>Ready for Your Next Look?</h2>
+
+        <p>
+            Your next beautiful braided hairstyle is waiting.
+            Get in touch to start your booking!
+        </p>
+
+        <a href="contact.html" class="button">Contact Us</a>
+    </section>
+
+    <section class="tiktok-section">
+
+        <h2>Follow Us on TikTok 💗</h2>
+
+        <p>
+            Want to see more beautiful braids and loc styles?
+            Follow Nylah's Braiding on TikTok!
+        </p>
+
+        <h3>@nylahs.braiding</h3>
+
+        <a href="https://www.tiktok.com/@nylahs.braiding"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="tiktok-button">
+            Visit Our TikTok →
+        </a>
+
+    </section>
+
+</main>
+
+<footer>
+    <h2>NYLAH'S BRAIDING</h2>
+    <p>Beauty in Every Braid 💗</p>
+
+    <p>
+        TikTok:
+        <a href="https://www.tiktok.com/@nylahs.braiding"
+           target="_blank"
+           rel="noopener noreferrer">
+            @nylahs.braiding
+        </a>
+    </p>
+
+    <p>© 2026 Nylah's Braiding. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
+```
